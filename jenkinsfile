@@ -4,7 +4,7 @@ pipeline {
     stages {
         stage ("Clean up"){
             steps {
-                sh "sudo rm -rf /root/.jenkins/workspace/astonvilla/*"
+                sh "rm -rf /root/.jenkins/workspace/astonvilla/*"
                 
             }
         }
