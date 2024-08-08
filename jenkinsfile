@@ -7,7 +7,8 @@ pipeline {
     stages {
         stage ("Clean up"){
             steps {
-                deleteDir()
+                sh "sudo rm -rf /root/.jenkins/workspace/astonvilla/*"
+                
             }
         }
         stage ("Clone repo"){
