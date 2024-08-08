@@ -20,6 +20,12 @@ pipeline {
                 }                
             }
         }
+        stage("Authenticate with Docker Hub") {
+            steps {
+                   sh "echo \malek@frikhi | docker login -u \malekfr11 --password-stdin"
+    }
+}
+
         stage ("push docker image") {
             steps {
                  dir("astonvilla"){
